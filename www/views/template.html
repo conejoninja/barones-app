@@ -1,0 +1,334 @@
+<div class="main">
+<!----container---->
+<div class="container">
+<!----- content ----->
+<div class="4-col-grids">
+<div class="col-md-3">
+    <div class="1-col-grids">
+        <!----profile---->
+        <div class="profile text-center">
+            <div class="profile-head">
+                <a href="#"><span> </span></a>
+            </div>
+            <div class="profile-info">
+                <h2><a href="#">John Doe</a></h2>
+                <span>Web Design | Cluj Napoca</span>
+            </div>
+        </div>
+        <!----profile---->
+        <div class="ad320x50" style="text-align:center">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- w3layouts_demo_320x50 -->
+            <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-9153409599391170" data-ad-slot="7023186287"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <!---- PIE CHART ---->
+        <div class="pie-chart">
+            <div class="pie-chrt-head">
+                <h2>PIE CHART</h2>
+            </div>
+            <!----up-load-stats---->
+            <div class="ad320x50" style="text-align:center">
+                <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- w3layouts_demo_320x50 -->
+                <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-9153409599391170" data-ad-slot="7023186287"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="up-load-stats">
+                <div class="chart">
+                    <!-----upload-js-files---->
+                    <script type="text/javascript" src="js/Chart.js"></script>
+                    <!---//upload-js-files---->
+                    <div class="diagram">
+                        <canvas id="canvas" height="210" width="210" style="width: 210px; height: 210px;"> </canvas>
+                        <h4>40<span>percent</span></h4>
+                    </div>
+                    <div class="chart_list text-left">
+                        <ul class="list-unstyled text-left">
+                            <li><span class="color1"> </span>Pizza<label>40%</label><div class="clearfix"> </div></li>
+                            <li><span class="color2"> </span>Hamburgers<label>8%</label><div class="clearfix"> </div></li>
+                            <li><span class="color3"> </span>Bacon<label>15%</label><div class="clearfix"> </div></li>
+                            <li><span class="color4"> </span>Apple Pie<label>25%</label><div class="clearfix"> </div></li>
+                            <li><span class="color5"> </span>Small children<label>12%</label><div class="clearfix"> </div></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <script>
+                        var doughnutData = [
+                            {
+                                value: 20,
+                                color:"#7C94BE"
+                            },
+                            {
+                                value : 40,
+                                color : "#78C8E6"
+                            },
+                            {
+                                value : 10,
+                                color : "#00CC0A"
+                            },
+                            {
+                                value : 30,
+                                color : "#FF895B"
+                            },
+
+                        ];
+                        var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+                    </script>
+                </div>
+            </div>
+            <!--//up-load-stats---->
+        </div>
+        <!---- PIE CHART ---->
+    </div>
+</div>
+<!----col-2---->
+<div class="col-md-3">
+    <div class="2-col-grids">
+        <!---- status ---->
+        <div class="status">
+            <div class="status-head text-center">
+                <h3>JULY STATS</h3>
+            </div>
+            <!---start-chart---->
+            <!--graph-->
+            <link rel="stylesheet" href="css/graph.css">
+            <script src="js/jquery.flot.min.js"></script>
+            <!--//graph-->
+            <script>
+                $(document).ready(function () {
+
+                    // Graph Data ##############################################
+                    var graphData = [{
+                        // Returning Visits
+                        data: [ [6, 4500], [7,3500], [8, 6550], [9, 7600], ],
+                        color: '#59676B',
+                        points: { radius: 4, fillColor: '#59676B' }
+                    }
+                    ];
+
+                    // Lines Graph #############################################
+                    $.plot($('#graph-lines'), graphData, {
+                        series: {
+                            points: {
+                                show: true,
+                                radius: 1
+                            },
+                            lines: {
+                                show: true
+                            },
+                            shadowSize: 0
+                        },
+                        grid: {
+                            color: '#59676B',
+                            borderColor: 'transparent',
+                            borderWidth: 10,
+                            hoverable: true
+                        },
+                        xaxis: {
+                            tickColor: 'transparent',
+                            tickDecimals: false
+                        },
+                        yaxis: {
+                            tickSize: 1200
+                        }
+                    });
+
+                    // Bars Graph ##############################################
+                    $.plot($('#graph-bars'), graphData, {
+                        series: {
+                            bars: {
+                                show: true,
+                                barWidth: .9,
+                                align: 'center'
+                            },
+                            shadowSize: 0
+                        },
+                        grid: {
+                            color: '#fff',
+                            borderColor: 'transparent',
+                            borderWidth: 20,
+                            hoverable: true
+                        },
+                        xaxis: {
+                            tickColor: 'transparent',
+                            tickDecimals: 2
+                        },
+                        yaxis: {
+                            tickSize: 1000
+                        }
+                    });
+
+                    // Graph Toggle ############################################
+                    $('#graph-bars').hide();
+
+                    $('#lines').on('click', function (e) {
+                        $('#bars').removeClass('active');
+                        $('#graph-bars').fadeOut();
+                        $(this).addClass('active');
+                        $('#graph-lines').fadeIn();
+                        e.preventDefault();
+                    });
+
+                    $('#bars').on('click', function (e) {
+                        $('#lines').removeClass('active');
+                        $('#graph-lines').fadeOut();
+                        $(this).addClass('active');
+                        $('#graph-bars').fadeIn().removeClass('hidden');
+                        e.preventDefault();
+                    });
+
+                    // Tooltip #################################################
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            top: y - 16,
+                            left: x + 20
+                        }).appendTo('body').fadeIn();
+                    }
+
+                    var previousPoint = null;
+
+                    $('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                $('#tooltip').remove();
+                                var x = item.datapoint[0],
+                                        y = item.datapoint[1];
+                                showTooltip(item.pageX, item.pageY, y+ x );
+                            }
+                        } else {
+                            $('#tooltip').remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                });
+            </script>
+            <!-- Graph HTML -->
+            <div id="graph-wrapper">
+                <div class="graph-container">
+                    <div id="graph-lines" style="padding: 0px;"><canvas class="base" width="237" height="270"></canvas><canvas class="overlay" width="237" height="270" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#59676B"><div class="tickLabel" style="position:absolute;text-align:center;left:14px;top:254px;width:59px">6</div><div class="tickLabel" style="position:absolute;text-align:center;left:75px;top:254px;width:59px">7</div><div class="tickLabel" style="position:absolute;text-align:center;left:136px;top:254px;width:59px">8</div><div class="tickLabel" style="position:absolute;text-align:center;left:198px;top:254px;width:59px">9</div></div><div class="yAxis y1Axis" style="color:#59676B"><div class="tickLabel" style="position:absolute;text-align:right;top:231px;right:209px;width:28px">2400</div><div class="tickLabel" style="position:absolute;text-align:right;top:185px;right:209px;width:28px">3600</div><div class="tickLabel" style="position:absolute;text-align:right;top:139px;right:209px;width:28px">4800</div><div class="tickLabel" style="position:absolute;text-align:right;top:94px;right:209px;width:28px">6000</div><div class="tickLabel" style="position:absolute;text-align:right;top:48px;right:209px;width:28px">7200</div><div class="tickLabel" style="position:absolute;text-align:right;top:2px;right:209px;width:28px">8400</div></div></div></div>
+                    <div id="graph-bars" style="padding: 0px; display: none;"><canvas class="base" width="237" height="270"></canvas><canvas class="overlay" width="237" height="270" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#fff"><div class="tickLabel" style="position:absolute;text-align:center;left:52px;top:254px;width:39px">6.00</div><div class="tickLabel" style="position:absolute;text-align:center;left:94px;top:254px;width:39px">7.00</div><div class="tickLabel" style="position:absolute;text-align:center;left:137px;top:254px;width:39px">8.00</div><div class="tickLabel" style="position:absolute;text-align:center;left:179px;top:254px;width:39px">9.00</div></div><div class="yAxis y1Axis" style="color:#fff"><div class="tickLabel" style="position:absolute;text-align:right;top:221px;right:209px;width:28px">0</div><div class="tickLabel" style="position:absolute;text-align:right;top:195px;right:209px;width:28px">1000</div><div class="tickLabel" style="position:absolute;text-align:right;top:169px;right:209px;width:28px">2000</div><div class="tickLabel" style="position:absolute;text-align:right;top:143px;right:209px;width:28px">3000</div><div class="tickLabel" style="position:absolute;text-align:right;top:117px;right:209px;width:28px">4000</div><div class="tickLabel" style="position:absolute;text-align:right;top:90px;right:209px;width:28px">5000</div><div class="tickLabel" style="position:absolute;text-align:right;top:64px;right:209px;width:28px">6000</div><div class="tickLabel" style="position:absolute;text-align:right;top:38px;right:209px;width:28px">7000</div><div class="tickLabel" style="position:absolute;text-align:right;top:12px;right:209px;width:28px">8000</div></div></div></div>
+                </div>
+            </div>
+            <!-- end Graph HTML -->
+            <!---//End-chart---->
+        </div>
+        <!---- status ---->
+        <div class="ad320x50" style="text-align:center">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- w3layouts_demo_320x50 -->
+            <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-9153409599391170" data-ad-slot="7023186287"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <!---- option-menu ---->
+        <script type="text/javascript" src="js/select.js"></script>
+        <div class="option-menu">
+            <form action="#">
+                <p>
+                    <input name="" type="hidden" id="" value="This is an option"><a class="trigger" href="#">This is an option</a><div class="dropcontainer"><ul class="dropdownhidden"><li><a href="#">This is an option</a></li><li><a href="#">This is another option</a></li><li><a href="#">And another</a></li><li><a href="#">And a third one</a></li><li><a href="#">Wales</a></li><li><a href="#">We have a lot of options</a></li><li><a href="#">Don't we, Bruce?</a></li></ul></div>
+                </p>
+            </form>
+        </div>
+        <!----//option-menu ---->
+        <!----- social-icons ---->
+        <div class="social-icons">
+            <ul>
+                <li><a class="fa" href="#"><span> </span></a></li>
+                <li><a class="gp" href="#"><span> </span></a></li>
+                <li><a class="tw" href="#"><span> </span></a></li>
+                <li><a class="db" href="#"><span> </span></a></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <!----- social-icons ---->
+    </div>
+</div>
+<!---//col-2---->
+<!--- col-3 ---->
+<div class="col-md-3">
+    <div class="col-3">
+        <!---- to-day --->
+        <div class="to-day text-center">
+            <h3>TODAY</h3>
+            <h1>3</h1>
+            <span>of July 2014</span>
+        </div>
+        <!---- to-day --->
+        <!---- calender ---->
+        <div class="calender">
+            <div class="example1 supercal carousel-vertical transition" style="margin:0 auto"> <div class="supercal-header"><button class="prev-month change-month btn">«</button><button class="next-month change-month btn">»</button><span class="month"><div>July 2014</div></span></div><div class="supercal-month"><table class="table table-condensed current"><tbody><tr><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th></tr><tr><td class="month-prev">30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr><tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td class="today selected">19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr><tr><td>28</td><td>29</td><td>30</td><td>31</td><td class="month-next">1</td><td class="month-next">2</td><td class="month-next">3</td></tr><tr><td class="month-next">4</td><td class="month-next">5</td><td class="month-next">6</td><td class="month-next">7</td><td class="month-next">8</td><td class="month-next">9</td><td class="month-next">10</td></tr></tbody></table></div><div class="supercal-footer input-prepend"><button class="btn supercal-today" type="button">Today</button><span class="supercal-input uneditable-input span2">19/07/14</span><input type="hidden" value="1405765338"></div></div>
+            <script src="js/jquery.supercal.js"></script>
+            <script>
+                $('.example1').supercal({
+                    transition: 'carousel-vertical'
+                });
+            </script>
+
+        </div>
+        <!---- calender ---->
+        <div class="clearfix"> </div>
+        <!--- socail-btn-col1 ---->
+        <div class="socail-btn-col1">
+            <ul>
+                <li><input class="face-btn" type="button" value="Facebook"></li>
+                <li><input class="twi-btn" type="button" value="Twitter"></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <!--- socail-btn-col1 ---->
+    </div>
+    <!--- //col-3 ---->
+</div>
+<!--- col-4 ---->
+<div class="col-4">
+    <div class="col-md-3">
+        <!--- subscribe --->
+        <div class="subscribe-form">
+            <h4>SUBSCRIBE</h4>
+            <form>
+                <input type="text" placeholder="Enter your email" required="">
+                <input type="password" placeholder="Enter your password" required="">
+                <input type="submit" value="SIGN UP">
+            </form>
+        </div>
+        <!--- subscribe --->
+        <!--- subscribe --->
+        <div class="login-form">
+            <h4>LOG IN</h4>
+            <form>
+                <input type="text" placeholder="Enter your email" required="">
+                <input type="password" placeholder="Enter your password" required="">
+                <input type="submit" value="SIGN UP">
+            </form>
+        </div>
+        <!--- subscribe --->
+        <!--- socail-btn-col2 ---->
+        <div class="socail-btn-col2">
+            <ul>
+                <li><input class="gl-btn" type="button" value="Facebook"></li>
+                <li><input class="drib-btn" type="button" value="Twitter"></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <!--- socail-btn-col2 ---->
+        <!---- copy-right ---->
+        <div class="copy-right">
+            <p>Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+        <!---- copy-right ---->
+    </div>
+</div>
+<!--- //col-4 ---->
+<div class="clearfix"> </div>
+</div>
+</div>
+<!----- content ----->
+</div>

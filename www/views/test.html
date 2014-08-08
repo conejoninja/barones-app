@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="container">
+        <div class="4-col-grids">
+            <div class="col-4">
+                <div class="col-md-3">
+                    <div class="subscribe-form">
+                        <h4>Sopla piratón</h4>
+                        <form>
+
+                            <div id="step1" class="steps">
+                                <p>Calibrando, espere</p>
+                                <p id="step1_time">{{seconds}} s</p>
+                            </div>
+
+                            <div id="step2" class="steps hidden">
+                                <p>Sopla piratón!</p>
+                                <p id="step2_time">{{seconds}} s</p>
+                                <p id="step2_bar">{{fields.btData}}</p>
+                            </div>
+
+                            <div id="step3" class="steps">
+
+                                <h1 id="step3_title_fail" class="hidden">BUUUUUUUUUH!</h1>
+                                <p id="step3_fail" class="hidden">Vaya parguelas, no entras en el top10 ni haciendo trampa.</p>
+
+                                <h1 id="step3_title_success" class="hidden">WHOOOOOOOOO!</h1>
+                                <p id="step3_success" class="hidden">Has conseguido entrar en el top10, eres todo un BARÓN</p>
+                                <a href="#/camera"><input id="camera_btn" class="camera" type="button" value="Take picture!"></a>
+                            </div>
+
+
+                            <div class="clearfix"> </div>
+                            <a href="#/"><input id="back_btn" class="stop" type="button" value="Hacer el gallina!"></a>
+                            <div class="clearfix"> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

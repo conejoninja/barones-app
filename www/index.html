@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="birraApp">
+<head>
+    <title>Barones</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery.min.js"></script>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/custom.css" rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        app.initialize();
+    </script>
+</head>
+
+<body>
+
+    <div class="page {{ pageClass }}" ng-view ></div>
+
+</body>
+</html>

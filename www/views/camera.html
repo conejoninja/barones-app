@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="container">
+        <div class="4-col-grids">
+            <div class="col-4">
+                <div class="col-md-3">
+                    <div class="subscribe-form">
+                        <h4>Barones de la Birra</h4>
+                        <form>
+                            <div class="profile text-center">
+                                <div class="profile-head">
+                                    <img id="camera_img" src="img/logo.png">
+                                </div>
+                            </div>
+
+                            <input type="text" id="points" name="points" value="Puntos en la escala barón {{ maxScore }}" disabled="disabled">
+
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required="">
+
+                            <a ng-click="saveCamera()"><input id="save_btn" type="button" value="Al top 10!"></a>
+                            <a href="#/"><input id="back_btn" class="stop" type="button" value="Hacer el gallina"></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

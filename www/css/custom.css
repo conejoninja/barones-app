@@ -1,0 +1,115 @@
+
+input[type="button"]{
+    background:#70D572;
+    color:#FFF;
+    padding:0.8em;
+    border:1px solid #70D572;
+    outline:none;
+    width:100%;
+    margin-top:0.5em;
+    border-radius:0.2em;
+    -webkit-border-radius:0.2em;
+    -ms-border-radius:0.2em;
+    -o-border-radius:0.2em;
+    -ms-border-radius:0.2em;
+    border-bottom:3px solid #60BA62;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+    outline:none;
+    cursor:pointer;
+}
+input[type="button"]:hover{
+    border:1px solid #60BA62;
+    border-bottom:3px solid #70D572;
+}
+
+
+.stop {
+    background: #ce1800 !important;
+    border:1px solid #ce1800 !important;
+    border-bottom:3px solid #960031 !important;
+}
+
+.camera {
+    background: #ffc839 !important;
+    border:1px solid #ffc839 !important;
+    border-bottom:3px solid #f3a438 !important;
+}
+
+.connect_img {
+    width: 32px;
+    height: 32px;
+}
+
+.steps {
+    text-align: center;
+}
+
+#step2_bar{
+    background:#70D572;
+    color:#FFF;
+    padding:0.8em;
+    outline:none;
+    width:100%;
+    height: 200px;
+    margin-top:0.5em;
+    border-radius:0.2em;
+    -webkit-border-radius:0.2em;
+    -ms-border-radius:0.2em;
+    -o-border-radius:0.2em;
+    -ms-border-radius:0.2em;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+    outline:none;
+}
+
+
+
+/* ANIMATIONS
+============================================================================= */
+
+.page.ng-leave 	{ z-index:9999; }
+.page.ng-enter 	{ z-index:8888; }
+
+/*.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+    -webkit-animation: scaleDown 0.5s both ease-in;
+    -moz-transform-origin: 0% 0%;
+    -moz-animation: scaleDown 0.5s both ease-in;
+    transform-origin: 0% 0%;
+    animation: scaleDown 0.5s both ease-in;
+} */
+.ng-enter 		{
+    -webkit-animation:scaleUp 0.5s both ease-in;
+    -moz-animation:scaleUp 0.5s both ease-in;
+    animation:scaleUp 0.5s both ease-in;
+}
+
+
+/* scale up */
+@keyframes scaleUp {
+    from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+    from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+    from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+/* scale down */
+@keyframes scaleDown {
+    to 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+@-moz-keyframes scaleDown {
+    to 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleDown {
+    to 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+

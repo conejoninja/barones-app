@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="container">
+        <div class="4-col-grids">
+            <div class="col-4">
+                <div class="col-md-3">
+                    <div class="subscribe-form">
+                        <h4>Bluetooth</h4>
+                        <form>
+                            <div id="connect_div" class="hidden">
+                                <div id="connect_info">
+                                    <img class="connect_img" src="img/connecting.gif" > Connecting
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <ul style="margin-bottom: 30px;">
+                                <li style="width: 100%;" ng-repeat="device in btDevices">
+                                    <span>{{device.name}}</span> <br/>
+                                    <span>{{device.address}}</span> <a ng-click="connectBT(device.address)" style="float: right;">Connect</a>
+                                </li>
+
+                            </ul>
+                            <div class="clearfix"> </div>
+                            <a href="#/"><input id="back_btn" type="button" value="Back"></a>
+                            <div class="clearfix"> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
