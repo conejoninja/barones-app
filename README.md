@@ -61,7 +61,7 @@ Bluetooth module
 I use the *JY-MCU* module, very famous and cheap. You can find it in several stores (eBay, AliExpress, DX,...). I also connect one led to their *state* output. This led will pulse when not connected and switch to permanent on when connected.
  
 **You need to program the BT module first**
-You could use the .ino code to program your BT module. Connect RX (arduino digital pin 2) to TX (BT), and TX (arduino digital pin 3) to RX (BT), upload the code to the arduino and wait a few seconds.
+You could use the .ino code in *arduino/ProgramBTModule* to program your BT module. Connect RX (arduino digital pin 2) to TX (BT), and TX (arduino digital pin 3) to RX (BT), upload the code to the arduino and wait a few seconds. The device should appear as *CONEJO-ALCOHOL* in your phone's BT devices list.
 
 
 ![alt tag](images/switch_and_usb_charger.jpg)
@@ -73,6 +73,11 @@ Handmade schematic since I didn't have the parts in Fritzing or any other schema
 
 
 ![alt tag](images/schematic.jpg)
+
+
+The box
+===
+Folder openscad-box contains the OpensSCAD and STL files for 3D printing it. Any small box could work too.
 
 
 
