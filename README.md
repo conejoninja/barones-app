@@ -53,7 +53,7 @@ Features
 
 Notes
 ---
-To get better measurement, sensor needs to be power on for several hours before usage 
+To get better measurement, sensor needs to be power on for several hours before usage. Since this is a "for-fun" app, there's no need to wait long time, and after a few minutes (20-30min) readings are more or less stable. It could last several hours with one full charge of battery. 
 
 
 Bluetooth module
@@ -115,6 +115,11 @@ The mobile app is done with Phonegap/Cordova ( + angularJS), you need it in your
 
 *Hall of fame (shame), picture, name, score and date*
 
+
+
+Disclaimer
+===
+This project was developed for fun, do not expect accurate results. For a more serious readings you will probably need better components. Blood Alcohol Content (BAC) could only be estimated from a breath sample and it's usually highly inaccurate. **If you need a breathanalyzer to know if you're able to drive, you should not drive. Drink responsibly.**
 
 
 Licenses
