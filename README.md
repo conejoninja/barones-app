@@ -4,7 +4,7 @@ Breathalyzer on your smartphone
 ![alt tag](images/top_view.jpg)
 
 Connect a breathalyzer to your smartphone and take pictures of your drunk friends with their highscores.
-This porject was around two years in the making, I started doing it in Java (the Android part) but got frustrated and left the project sitting in a box all this time. For the smartphone app I'm using phonegap/cordova, so it should work on iOS or windows phone, or at least, it should be easy to be ported. 
+This project was around two years in the making, I started doing it in Java (the Android part) but got frustrated and left the project sitting in a box all this time. For the smartphone app I'm using phonegap/cordova, so it should work on iOS or windows phone, or at least, it should be easy to be ported. 
 
 
 The idea isn't new, but all similar projects I found, didn't share the smartphone app's code, I do. It isn't the nicest app you could find, but it works.
@@ -22,7 +22,7 @@ Bill of materials
 * 1 DSO Nano v2 replacement battery (seeedstudio) 4.10€ (5.50$) - http://www.seeedstudio.com/depot/DSO-Nano-v2-replacement-battery-p-738.html
 * 1 Bluetooth module 4.80€ (6.43$) - http://www.dx.com/p/jy-mcu-arduino-bluetooth-wireless-serial-port-module-104299 (I think I bought it from ebay, and bought a pair, but is similar to this if not the same) 
 * 1 Shipping from seeedstudio 2.56€ (3.44$)
-* 1 3D printed case and paint 5€ (no idea, as I printed it mayself, but a small plastic case should cost much more)
+* 1 3D printed case and paint 5€ (no idea, as I printed it mayself, but a small plastic case shouldn't cost much more)
 * 1 switch, 2 leds, glue,.. less than 2-3€
 
 **Aproximate cost: 40-45€**
